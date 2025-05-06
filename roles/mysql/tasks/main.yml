@@ -1,0 +1,23 @@
+- name: Installer MySQL Server
+  apt:
+    name: mysql-server
+    state: present
+    update_cache: yes
+
+- name: Démarrer et activer MySQL
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+
+- name: Créer une base de données
+  mysql_db:
+    name: database
+    state: present
+
+- name: Créer un utilisateur MySQL
+  mysql_user:
+    name: user
+    password: password
+    priv: 'database.*:ALL'
+    state: present

@@ -1,0 +1,13 @@
+- name: Installer PHP et modules nécessaires
+  apt:
+    name:
+      - php
+      - php-mysql
+    state: present
+    update_cache: yes
+
+- name: Copier la page de test PHP
+  copy:
+    src: test.php
+    dest: /var/www/html/test.php
+    mode: '0644'
