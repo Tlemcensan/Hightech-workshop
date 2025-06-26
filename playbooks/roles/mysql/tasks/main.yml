@@ -1,6 +1,6 @@
-- name: Installer MySQL Server
+- name: Installer MariaDB Server (compatible MySQL)
   apt:
-    name: mysql-server
+    name: mariadb-server
     state: present
     update_cache: yes
 
