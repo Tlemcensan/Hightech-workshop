@@ -1,6 +1,6 @@
 # Hightech Workshop - Déploiement automatisé
 
-## 🎯 Objectif
+##  Objectif
 
 Automatiser le déploiement de deux environnements (`production` et `staging`) avec :
 - Nginx
@@ -15,7 +15,7 @@ Chaque environnement utilise :
 
 ---
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 inventories/
@@ -28,16 +28,17 @@ group_vars/
 
 playbooks/
   └── site.yml
-
-roles/
+  roles/
   ├── nginx/
   ├── php/
   └── mysql/
+
+
 ```
 
 ---
 
-## 🚀 Commandes de déploiement
+##  Commandes de déploiement
 
 ### 1. Cloner le dépôt
 
@@ -62,7 +63,7 @@ ansible-playbook -i inventories/staging/hosts playbooks/site.yml --ask-vault-pas
 
 ---
 
-## ✅ Résultat attendu
+##  Résultat attendu
 
 Accéder à l’adresse IP de la VM dans le navigateur :
 
@@ -71,13 +72,13 @@ Accéder à l’adresse IP de la VM dans le navigateur :
 
 ---
 
-## 👨‍🎓 Auteurs
+##  Auteurs
 
 - SANHAJI Tlemcen – Numéro étudiant : *à compléter*
 
 ---
 
-## 🔐 Sécurité
+##  Sécurité
 
 - Les mots de passe (base de données) sont stockés dans des fichiers `vault.yml` chiffrés avec Ansible Vault.
 - Aucun mot de passe en clair n’est présent dans le dépôt.
