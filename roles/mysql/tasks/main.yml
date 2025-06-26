@@ -12,12 +12,12 @@
 
 - name: Créer une base de données
   mysql_db:
-    name: database
+    name: "{{ mysql_db_name }}"
     state: present
 
 - name: Créer un utilisateur MySQL
   mysql_user:
-    name: user
-    password: password
-    priv: 'database.*:ALL'
+    name: "{{ mysql_user }}"
+    password: "{{ mysql_password }}"
+    priv: "{{ mysql_db_name }}.*:ALL"
     state: present

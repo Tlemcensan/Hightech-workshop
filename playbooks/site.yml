@@ -1,6 +1,7 @@
 - hosts: all
   become: yes
   roles:
-    - nginx
-    - php
-    - mysql
+  - { role: nginx, tags: ['nginx'] }
+  - { role: php, tags: ['php'] }
+  - { role: mysql, tags: ['mysql'] }
+
