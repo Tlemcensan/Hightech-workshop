@@ -1,0 +1,30 @@
+# Fichiers temporaires
+*.log
+*.retry
+*.swp
+
+# Fichiers sensibles
+*.vault_pass.txt
+*.pem
+*.key
+
+# Répertoire Python / virtualenv
+__pycache__/
+.env/
+.venv/
+
+# Fichiers système
+.DS_Store
+
+# Archives
+*.zip
+*.tar.gz
+
+# Fichiers de sortie
+*.out
+
+# Ansible facts
+.fact_cache/
+
+# Backup files
+*~
